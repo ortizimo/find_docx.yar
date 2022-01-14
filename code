@@ -1,0 +1,18 @@
+rule find_docx_files
+{					
+	meta:
+		author = "Saulo 'Sal' Ortiz, Sr. Cyber Forensics Analyst"
+		description = "Scans for the file format of a specific file."
+		date = "2022-01-07"
+		updated = "2022-01-13"
+		note = "Files in $Recycle.Bin do not show their actual name. Look for the file's metadata file ($I...) for its actual name"
+
+	strings:
+		$magic = { 50 4b 03 04 14 } private
+		$DOCX = /[a-zA-Z0-9]{1,30}\.docx/ fullword ascii nocase
+    
+    	// Note: All MS Office programs and also other file types have the same HEX...This rule only searches for the file format selected
+   
+   condition:
+		any of them
+}
