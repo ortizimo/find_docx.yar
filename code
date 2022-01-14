@@ -10,8 +10,8 @@ rule find_docx_files
 	strings:
 		$magic = { 50 4b 03 04 14 } private
 		$DOCX = /[a-zA-Z0-9]{1,30}\.docx/ fullword ascii nocase
-    
-    	// Note: All MS Office programs and also other file types have the same HEX...This rule only searches for the file format selected
+        		// note 1: All MS Office programs and other file types share the same HEX
+			// note 2: use notepad++ to filter
    
    condition:
 		any of them
