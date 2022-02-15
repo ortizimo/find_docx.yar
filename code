@@ -1,7 +1,7 @@
 rule find_docx_files
 {					
 	meta:
-		author = "Saulo 'Sal' Ortiz, Sr. Cyber Forensics Analyst"
+		author = "Saulo 'Sal' Ortiz, Sr. Cyber Forensics Analyst, ATG"
 		description = "Scans for the file format of a specific file."
 		date = "2022-01-07"
 		updated = "2022-01-13"
