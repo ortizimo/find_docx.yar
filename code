@@ -1,3 +1,4 @@
+
 rule find_docx_files
 {					
 	meta:
